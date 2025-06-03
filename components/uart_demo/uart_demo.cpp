@@ -22,5 +22,9 @@ void UARTDemo::set_the_switch(bool enable) {
     
 }
 
+void UARTDemo::set_the_button() {
+    
+}
+
 }  // namespace uart_demo
 }  // namespace esphome
