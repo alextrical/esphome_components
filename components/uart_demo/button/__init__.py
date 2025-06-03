@@ -23,4 +23,5 @@ async def to_code(config):
     if the_button_config := config.get(CONF_THE_BUTTON):
         b = await button.new_button(the_button_config)
         await cg.register_parented(b, config[CONF_UART_DEMO_ID])
-        cg.add(uart_demo_component.set_the_button(b))
+        cg.add(uart_demo_component.set_the_button())
+        # cg.add(uart_demo_component.set_the_button(b))
