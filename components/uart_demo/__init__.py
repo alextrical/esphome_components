@@ -5,13 +5,15 @@ from esphome.const import CONF_ID
 
 DEPENDENCIES = ["uart"]
 
-empty_uart_component_ns = cg.esphome_ns.namespace("empty_uart_component")
-EmptyUARTComponent = empty_uart_component_ns.class_(
-    "EmptyUARTComponent", cg.Component, uart.UARTDevice
+uart_demo_ns = cg.esphome_ns.namespace("uart_demo")
+UARTDemo = uart_demo_ns.class_(
+    "UARTDemo", cg.Component, uart.UARTDevice
 )
 
+CONF_UART_DEMO_ID = "UARTDemo_id"
+
 CONFIG_SCHEMA = (
-    cv.Schema({cv.GenerateID(): cv.declare_id(EmptyUARTComponent)})
+    cv.Schema({cv.GenerateID(): cv.declare_id(UARTDemo)})
     .extend(cv.COMPONENT_SCHEMA)
     .extend(uart.UART_DEVICE_SCHEMA)
 )

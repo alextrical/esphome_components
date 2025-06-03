@@ -30,10 +30,15 @@ uart:
   tx_pin: GPIO1
   rx_pin: GPIO3
   baud_rate: 9600
-  id: demo_uart
 
-uart_demo3:
-#   - id: demo
+uart_demo:
+
+switch:
+  - platform: uart_demo
+    the_switch:
+      name: "The Switch"
+
+  # - id: my_uart_demo
 #     uart_id: demo_uart
 #     the_text:
 #       id: the_text

@@ -4,15 +4,16 @@
 #include "esphome/components/uart/uart.h"
 
 namespace esphome {
-namespace empty_uart_component {
+namespace uart_demo {
 
-class EmptyUARTComponent : public uart::UARTDevice, public Component {
+class UARTDemo : public uart::UARTDevice, public Component {
   public:
     void setup() override;
     void loop() override;
     void dump_config() override;
+    void set_the_switch(bool enable);
 };
 
 
-}  // namespace empty_uart_component
+}  // namespace uart_demo
 }  // namespace esphome

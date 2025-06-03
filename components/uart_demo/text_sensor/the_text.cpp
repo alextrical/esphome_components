@@ -1,4 +1,4 @@
-#include "uptime_text_sensor.h"
+#include "the_text.h"
 
 #include "esphome/core/hal.h"
 #include "esphome/core/helpers.h"
