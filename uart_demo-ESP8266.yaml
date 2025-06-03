@@ -37,9 +37,9 @@ switch:
   - platform: uart_demo
     the_switch:
       name: "The Switch"
+      id: the_switch
 
-  # - id: my_uart_demo
-#     uart_id: demo_uart
+
 #     the_text:
 #       id: the_text
 #       name: the_text
@@ -70,8 +70,8 @@ switch:
 #     name: Float Light
 #     output: the_flt_out
 
-# interval:
-#   - interval: 10s
-#     then:
-#       - switch.toggle: the_switch
+interval:
+  - interval: 10s
+    then:
+      - switch.toggle: the_switch
 #       - button.press: the_button
