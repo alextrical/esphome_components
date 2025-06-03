@@ -1,0 +1,72 @@
+esphome:
+  name: esphome-demo
+  min_version: 2024.11.0
+
+esp8266:
+  board: d1_mini  # Adjust to your specific ESP8266 board
+
+api:
+  encryption:
+    key: !secret api_encryption_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_pass
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+captive_portal:
+
+external_components:
+  - source: ./components
+
+logger:
+  level: DEBUG
+  baud_rate: 9600
+
+uart:
+  tx_pin: GPIO1
+  rx_pin: GPIO3
+  baud_rate: 9600
+  id: demo_uart
+
+uart_demo3:
+#   - id: demo
+#     uart_id: demo_uart
+#     the_text:
+#       id: the_text
+#       name: the_text
+#     the_sensor:
+#       id: the_sensor
+#       name: the_sensor
+#     the_bin_output:
+#       id: the_bin_out
+#       # name: the_bin_out
+#     the_flt_output:
+#       id: the_flt_out
+#       # name: the_flt_out
+#     the_binsensor:
+#       id: the_binsensor
+#       name: the_binsensor
+#     the_switch:
+#       id: the_switch
+#       name: the_switch
+#     the_button:
+#       id: the_button
+#       name: the_button
+
+# light:
+#   - platform: binary
+#     name: Binary Light
+#     output: the_bin_out
+#   - platform: monochromatic
+#     name: Float Light
+#     output: the_flt_out
+
+# interval:
+#   - interval: 10s
+#     then:
+#       - switch.toggle: the_switch
+#       - button.press: the_button
