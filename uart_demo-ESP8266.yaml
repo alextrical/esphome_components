@@ -35,21 +35,67 @@ uart_demo:
 
 switch:
   - platform: uart_demo
-    the_switch_1:
-      name: "The Switch 1"
-      id: the_switch_1
-    the_switch_2:
-      name: "The Switch 2"
-      id: the_switch_2
+    the_switch:
+      id: the_switch
+      name: the_switch
 
-button:
-  - platform: uart_demo
-    the_button_1:
-      name: "The Button 1"
-      id: the_button_1
-    the_button_2:
-      name: "The Button 2"
-      id: the_button_2
+# uart_demo2:
+#   - id: demo
+#     uart_id: demo_uart
+#     the_text:
+#       id: the_text
+#     the_sensor:
+#       id: the_sensor
+#     the_bin_output:
+#       id: the_bin_out
+#     the_flt_output:
+#       id: the_flt_out
+#     the_binsensor:
+#       id: the_binsensor
+#     the_switch:
+#       id: the_switch
+#     the_button:
+#       id: the_button
+
+# light:
+#   - platform: binary
+#     name: Binary Light
+#     output: the_bin_out
+#   - platform: monochromatic
+#     name: Float Light
+#     output: the_flt_out
+
+# interval:
+#   - interval: 10s
+#     then:
+#       - switch.toggle: the_switch
+#       - button.press: the_button
+
+
+
+# switch:
+#   - platform: uart_demo
+#     the_switch_1:
+#       name: "The Switch 1"
+#       id: the_switch_1
+#     the_switch_2:
+#       name: "The Switch 2"
+#       id: the_switch_2
+
+# button:
+#   - platform: uart_demo
+#     the_button_1:
+#       name: "The Button 1"
+#       id: the_button_1
+#     the_button_2:
+#       name: "The Button 2"
+#       id: the_button_2
+
+# output:
+#   - platform: uart_demo
+#     the_bin_output:
+#       id: the_binsensor
+#       name: the_binsensor
 
 
 #     the_text:
@@ -82,8 +128,8 @@ button:
 #     name: Float Light
 #     output: the_flt_out
 
-interval:
-  - interval: 10s
-    then:
-      - switch.toggle: the_switch_1
-      - button.press: the_button_1
+# interval:
+#   - interval: 10s
+#     then:
+#       - switch.toggle: the_switch_1
+#       - button.press: the_button_1
