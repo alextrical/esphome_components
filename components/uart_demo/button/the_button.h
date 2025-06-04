@@ -9,6 +9,7 @@ namespace uart_demo {
 class TheButton : public button::Button, public Parented<UARTDemo> {
  public:
   TheButton() = default;
+  // void dump_config() override;
 
  protected:
   void press_action() override;

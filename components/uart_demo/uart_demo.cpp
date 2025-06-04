@@ -19,11 +19,11 @@ void UARTDemo::dump_config(){
 }
 
 void UARTDemo::set_the_switch(bool enable) {
-    
+  ESP_LOGCONFIG(TAG, "The Switch is %d", enable);
 }
 
 void UARTDemo::set_the_button() {
-    
+  ESP_LOGCONFIG(TAG, "The Button Pressed");
 }
 
 }  // namespace uart_demo
