@@ -35,9 +35,12 @@ uart_demo:
 
 switch:
   - platform: uart_demo
-    the_switch:
-      name: "The Switch"
-      id: the_switch
+    the_switch_1:
+      name: "The Switch 1"
+      id: the_switch_1
+    the_switch_2:
+      name: "The Switch 2"
+      id: the_switch_2
 
 button:
   - platform: uart_demo
@@ -82,5 +85,5 @@ button:
 interval:
   - interval: 10s
     then:
-      - switch.toggle: the_switch
+      - switch.toggle: the_switch_1
       - button.press: the_button_1

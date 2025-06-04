@@ -18,15 +18,19 @@ void UARTDemo::dump_config(){
   ESP_LOGCONFIG(TAG, "UART Demo Component");
 }
 
-void UARTDemo::set_the_switch(bool enable) {
-  ESP_LOGCONFIG(TAG, "The Switch is %d", enable);
+void UARTDemo::set_the_switch_1(bool enable) {
+  ESP_LOGCONFIG(TAG, "The Switch 1 is %d", enable);
 }
 
-void UARTDemo::set_the_button1() {
+void UARTDemo::set_the_switch_2(bool enable) {
+  ESP_LOGCONFIG(TAG, "The Switch 2 is %d", enable);
+}
+
+void UARTDemo::set_the_button_1() {
   ESP_LOGCONFIG(TAG, "The Button 1 Pressed");
 }
 
-void UARTDemo::set_the_button2() {
+void UARTDemo::set_the_button_2() {
   ESP_LOGCONFIG(TAG, "The Button 2 Pressed");
 }
 

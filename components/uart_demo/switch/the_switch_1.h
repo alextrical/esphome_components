@@ -6,7 +6,7 @@
 namespace esphome {
 namespace uart_demo {
 
-class TheSwitch : public switch_::Switch, public Parented<UARTDemo> {
+class TheSwitch1 : public switch_::Switch, public Parented<UARTDemo> {
  protected:
   void write_state(bool state) override;
 };
