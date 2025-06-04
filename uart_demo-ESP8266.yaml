@@ -39,6 +39,12 @@ switch:
       id: the_switch
       name: the_switch
 
+button:
+  - platform: uart_demo
+    the_button:
+      name: "The Button"
+      id: the_button
+
 # uart_demo2:
 #   - id: demo
 #     uart_id: demo_uart

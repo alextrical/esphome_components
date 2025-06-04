@@ -76,13 +76,13 @@ void UARTDemoFOutput::write_state(float state) {
 //   this->publish_state(state);
 // }
 
-void UARTDemoButton::dump_config() {
-  LOG_BUTTON("", "UART Demo Button", this);
-}
+// void UARTDemoButton::dump_config() {
+//   LOG_BUTTON("", "UART Demo Button", this);
+// }
 
-void UARTDemoButton::press_action() {
-  this->parent_->ping();
-}
+// void UARTDemoButton::press_action() {
+//   this->parent_->ping();
+// }
 
 }  // namespace uart_demo
 }  // namespace esphome
