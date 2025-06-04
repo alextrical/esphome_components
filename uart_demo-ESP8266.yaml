@@ -41,9 +41,12 @@ switch:
 
 button:
   - platform: uart_demo
-    the_button:
-      name: "The Button"
-      id: the_button
+    the_button_1:
+      name: "The Button 1"
+      id: the_button_1
+    the_button_2:
+      name: "The Button 2"
+      id: the_button_2
 
 
 #     the_text:
@@ -80,4 +83,4 @@ interval:
   - interval: 10s
     then:
       - switch.toggle: the_switch
-#       - button.press: the_button
+      - button.press: the_button_1

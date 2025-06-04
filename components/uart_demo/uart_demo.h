@@ -12,7 +12,8 @@ class UARTDemo : public uart::UARTDevice, public Component {
     void loop() override;
     void dump_config() override;
     void set_the_switch(bool enable);
-    void set_the_button();
+    void set_the_button1();
+    void set_the_button2();
 };
 
 

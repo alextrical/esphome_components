@@ -7,21 +7,24 @@ from .. import CONF_UART_DEMO_ID, UARTDemo, uart_demo_ns
 
 DEPENDENCIES = ["uart_demo"]
 
-CONF_THE_BUTTON = "the_button"
+CONF_THE_BUTTON1 = "the_button_1"
+CONF_THE_BUTTON2 = "the_button_2"
 
-TheButton = uart_demo_ns.class_("TheButton", button.Button)
+TheButton1 = uart_demo_ns.class_("TheButton1", button.Button)
+TheButton2 = uart_demo_ns.class_("TheButton2", button.Button)
 
 CONFIG_SCHEMA = {
     cv.GenerateID(CONF_UART_DEMO_ID): cv.use_id(UARTDemo),
-    cv.Optional(CONF_THE_BUTTON): button.button_schema(
-        TheButton,
+    cv.Optional(CONF_THE_BUTTON1): button.button_schema(
+        TheButton1,
+    ),
+    cv.Optional(CONF_THE_BUTTON2): button.button_schema(
+        TheButton2,
     ),
 }
 
 async def to_code(config):
-    uart_demo_component = await cg.get_variable(config[CONF_UART_DEMO_ID])
-    if the_button_config := config.get(CONF_THE_BUTTON):
-        b = await button.new_button(the_button_config)
-        await cg.register_parented(b, config[CONF_UART_DEMO_ID])
-        cg.add(uart_demo_component.set_the_button(b))
-        # cg.add(uart_demo_component.set_the_button(b))
+    for button_type in [CONF_THE_BUTTON1, CONF_THE_BUTTON2]:
+        if conf := config.get(button_type):
+            btn = await button.new_button(conf)
+            await cg.register_parented(btn, config[CONF_UART_DEMO_ID])

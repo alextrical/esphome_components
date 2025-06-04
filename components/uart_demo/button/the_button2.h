@@ -6,10 +6,9 @@
 namespace esphome {
 namespace uart_demo {
 
-class TheButton : public button::Button, public Parented<UARTDemo> {
+class TheButton2 : public button::Button, public Parented<UARTDemo> {
  public:
-  TheButton() = default;
-  // void dump_config() override;
+  TheButton2() = default;
 
  protected:
   void press_action() override;
