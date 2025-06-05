@@ -2,11 +2,7 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/binary_sensor/binary_sensor.h"
-// #include "esphome/components/button/button.h"
-#include "esphome/components/output/binary_output.h"
-#include "esphome/components/output/float_output.h"
 #include "esphome/components/sensor/sensor.h"
-// #include "esphome/components/switch/switch.h"
 #include "esphome/components/text_sensor/text_sensor.h"
 #include "esphome/components/uart/uart.h"
 
@@ -35,42 +31,6 @@ class UARTDemo : public Component,  public uart::UARTDevice {
   void handle_char_(uint8_t c);
   std::vector<uint8_t> rx_message_;
 };
-
-class UARTDemoBOutput : public Component, public output::BinaryOutput {
- public:
-  void dump_config() override;
-  void set_parent(UARTDemo *parent) { this->parent_ = parent; }
- protected:
-  void write_state(bool state) override;
-  UARTDemo *parent_;
-};
-
-class UARTDemoFOutput : public Component, public output::FloatOutput {
- public:
-  void dump_config() override;
-  void set_parent(UARTDemo *parent) { this->parent_ = parent; }
- protected:
-  void write_state(float state) override;
-  UARTDemo *parent_;
-};
-
-// class UARTDemoSwitch : public Component, public switch_::Switch {
-//  public:
-//   void dump_config() override;
-//   void set_parent(UARTDemo *parent) { this->parent_ = parent; }
-//  protected:
-//   void write_state(bool state) override;
-//   UARTDemo *parent_;
-// };
-
-// class UARTDemoButton : public Component, public button::Button {
-//  public:
-//   void dump_config() override;
-//   void set_parent(UARTDemo *parent) { this->parent_ = parent; }
-//  protected:
-//   void press_action() override;
-//   UARTDemo *parent_;
-// };
 
 }  // namespace uart_demo
 }  // namespace esphome
